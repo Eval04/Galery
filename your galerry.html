@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gallery for My Love 💖</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="c-css.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">My Love's Gallery 💖</a>
+      </div>
+    </nav>
+
+    <!-- Gallery Title -->
+    <h2 class="gallery-title" style="background-color: #ffb6c1">
+      Ini Untuk sayang ku
+    </h2>
+
+    <!-- Photo Gallery -->
+    <section class="gallery container">
+      <div class="gallery-item">
+        <img src="scr/Gambar 1.jpg" alt="Image 1" />
+        <div class="overlay">
+          <div class="overlay-text">First Date</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="scr/Gambar 3.jpg" alt="Image 2" />
+        <div class="overlay">
+          <div class="overlay-text">Adorable Moment</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="scr/Gambar 4.jpg" alt="Image 3" />
+        <div class="overlay">
+          <div class="overlay-text">Our Journey</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="scr/Gambar2.jpg" alt="Image 4" />
+        <div class="overlay">
+          <div class="overlay-text">Together Forever</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="scr/Gambar 5.jpg" alt="Image 5" />
+        <div class="overlay">
+          <div class="overlay-text">Cute photos</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="scr/Gambar 6.jpg" alt="Image 6" />
+        <div class="overlay">
+          <div class="overlay-text">Bussu</div>
+        </div>
+      </div>
+      <!-- Add more photos as needed -->
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="container">
+        <h2>Special Moments (Videos)</h2>
+        <div class="video-container">
+          <div class="video-item">
+            <!-- Replace with your own video link -->
+            <iframe src="scr/vid/Vid1.mp4" allowfullscreen></iframe>
+          </div>
+          <div class="video-item">
+            <!-- Replace with your own video link -->
+            <iframe src="scr/vid/Vid1.mp4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <h1 style="color: red"><b>Pencet</b></h1>
+      <button class="btn-custom" id="loveYouBtn">Love You!</button>
+    </footer>
+
+    <!-- Hearts Container -->
+    <div id="heartsContainer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Heart Rain JavaScript -->
+    <script>
+      document
+        .getElementById("loveYouBtn")
+        .addEventListener("click", function () {
+          for (let i = 0; i < 20; i++) {
+            createHeart();
+          }
+        });
+
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "💖";
+        document.body.appendChild(heart);
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000); // Remove heart after 5 seconds
+      }
+    </script>
+  </body>
+</html>
